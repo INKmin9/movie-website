@@ -12,7 +12,10 @@
     function App() {
       const [counter, setCounter] = React.useState(0);
       const onClick = () => {
-        setCounter(counter + 1);
+        //cannot guarantee the 'current' is the current value
+        // setCounter(counter + 1);
+        //guarantee the 'current' is the current value
+        setCounter((current) => current + 1);
       };
       return (
         <div>
